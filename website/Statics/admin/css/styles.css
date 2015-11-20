@@ -1,0 +1,435 @@
+/*
+**导航样式
+*/
+body{
+    font-size: 12px;
+    font-family: inherit;
+}
+a{
+    outline: none !important;
+}
+ul li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-style{
+    background: #09c;
+    border-radius: 0;
+    border: none;
+    margin-bottom: 0;
+}
+.nav-style .navbar-nav > li > a{
+    color: #fff;
+    border-left: 1px solid #008fbf;
+}
+.nav-style .navbar-brand{
+    color: #fff;
+}
+.nav-style .navbar-nav > li > a:hover,.nav-style .navbar-nav > li > a:focus,.nav-style .navbar-nav > li.active > a{
+    background-color: #008fbf;
+}
+.nav-style .nav .open > a,.nav-style .nav .open > a:hover,.nav-style .nav .open > a:focus{
+    background-color: #008fbf;
+}
+.nav-style .navbar-toggle .icon-bar{
+    background-color:#fff;
+}
+.nav-style .navbar-toggle{
+    border-color: #fff;
+}
+.nav-style .navbar-nav > li > .dropdown-menu{
+    border-radius: 0;
+    padding: 0;
+}
+.nav-style .dropdown-menu .divider{
+    margin: 0;
+}
+.nav-style .dropdown-menu > li > a{
+    padding: 7px 20px;
+}
+/*
+** 主体
+*/
+.body{
+    background: #fff;
+    padding: 0;
+}
+/*
+** 侧边栏
+*/
+.body .sidebar{
+    background-color: #293038;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: fixed;
+    top: 50px;
+    width: 0;
+    z-index: 102;
+}
+.body.sidebar-mini .sidebar{
+    width: 50px;
+}
+.body.sidebar-full .sidebar{
+    width: 180px;
+}
+.body.sidebar-full .sidebar .sidebar-content{
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 200px;
+}
+.body.sidebar-mini .sidebar .sidebar-content{
+    width: 70px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.body.sidebar-mini .main{
+    left: 50px;
+}
+.body.sidebar-full .main{
+    left: 180px;
+}
+.body.sidebar-full .sidebar .sidebar-content .sidebar-fold{
+    width: 180px;
+}
+.body.sidebar-mini .sidebar .sidebar-content .sidebar-fold{
+    width: 50px;
+}
+.body .sidebar .sidebar-content .sidebar-fold{
+    -moz-user-select: none;
+    background: #394555 none repeat scroll 0 0;
+    color: #aeb9c2;
+    cursor: pointer;
+    font-size: 10px;
+    height: 30px;
+    line-height: 30px !important;
+    text-align: center;
+}
+.body .sidebar  .sidebar-content >ul{
+    margin: 0;
+    padding: 0;
+}
+.body .sidebar  .sidebar-content >ul>li>a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    width: 100%;
+    transition: all 0.12s ease 0s, all 0.12s ease 0s;
+}
+.body .sidebar  .sidebar-content >ul>li.link>a:hover{
+    background-color: #37424f;
+}
+.body .sidebar  .sidebar-content >ul>li.active>a,.body .sidebar  .sidebar-content >ul>li.active>a:hover{
+    background-color: #09c;
+}
+.body .sidebar .sidebar-content >ul>li>a .nav-icon{
+    color: #aeb9c2;
+    float: left;
+    font-size: 16px;
+    text-align: center;
+    width: 50px;
+}
+.body .sidebar .sidebar-content >ul>li.active>a .nav-icon,.body .sidebar .sidebar-content>ul>li.active>a .nav-title{
+    color: #fff;
+}
+.body .sidebar .sidebar-content > ul > li > a .nav-title{
+    color: #fff;
+    display: block;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 130px;
+}
+.body.sidebar-mini .sidebar .sidebar-content > ul > li > a .nav-title{
+    display: none;
+}
+/*
+** 内容
+*/
+.body .main{
+    background: #fff none repeat scroll 0 0;
+    bottom: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: auto;
+}
+.body .main .main-sidebar{
+    background-color: #eaedf1;
+    bottom: 0;
+    float: left;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transition: all 0.2s ease 0s;
+    width: 0;
+    z-index: 2;
+}
+.body .main.main-sidebar-show .main-sidebar{
+    width: 180px;
+}
+.main .main-sidebar .main-sidebar-body{
+    bottom: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 180px;
+}
+.main-sidebar-body .main-sidebar-body-title{
+    background: #d9dee4 none repeat scroll 0 0;
+    height: 70px;
+    line-height: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 180px;
+    font-weight: bold;
+    text-indent: 20px;
+}
+.main-sidebar .main-sidebar-list{
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    right: 0;
+    top: 70px;
+}
+.main-sidebar-list ul{
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.main-sidebar-list ul li a{
+    color: #333;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 180px;
+}
+.main-sidebar-list ul li.active a{
+    background-color: #fff;
+}
+.main-sidebar-list ul li.active a:hover{
+     background-color: #fff;
+ }
+.main-sidebar-list ul li a > .icon-nav{
+    color: #333;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 30px;
+}
+.main-sidebar-list ul li a > .icon-nav > span{
+    font-size: 10px;
+}
+.main-sidebar-list ul li a .name{
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 138px;
+}
+.main-sidebar-list ul li a:hover{
+    background: #f4f6f8;
+}
+.main-sidebar-list ul li._show a .right{
+    display: none;
+}
+.main-sidebar-list ul li._hide a .bottom{
+    display: none;
+}
+.main-sidebar-list ul li._hide ul{
+    display: none;
+}
+.main-sidebar-list ul li._show ul{
+    display: inline-block;
+}
+.main-sidebar-list ul ul li a .name{
+    text-indent: 8px;
+}
+/*
+** 二级侧边栏隐藏 && 显示按钮
+*/
+.main .action{
+    height: 50px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transition: all 0.2s ease 0s;
+    width: 20px;
+    z-index: 3;
+    overflow: hidden;
+}
+.main.main-sidebar-show .action{
+    left: 160px;
+}
+.main.main-sidebar-show .action .action-icon{
+    border-color: transparent #f7f7f7 transparent -moz-use-text-color;
+    border-style: solid solid solid none;
+    border-width: 9px 13px 9px medium;
+    left: auto;
+    right: 0;
+}
+.main .action .action-icon{
+    border-bottom: 9px solid transparent;
+    border-left: 13px solid #d9dee4;
+    border-top: 9px solid transparent;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.1s ease 0s, all 0.1s ease 0s;
+    width: 0;
+}
+.main .action .action-bottom{
+    cursor: pointer;
+    height: 50px;
+    left: -7px;
+    position: relative;
+    text-align: center;
+    transition: all 0.1s ease 0s, all 0.1s ease 0s;
+}
+.main.main-sidebar-show .action .action-bottom{
+    left: auto;
+    right: -7px;
+}
+.main.main-sidebar-show .action:hover .action-bottom{
+    left: auto;
+    right: 0;
+}
+.main.main-sidebar-hide .action:hover .action-bottom{
+    left: 0;
+    right: 0;
+}
+.main.main-sidebar-show .action:hover .action-icon{
+    border-width: 9px 20px 9px medium;
+}
+.main.main-sidebar-hide .action:hover .action-icon{
+    border-left: 20px solid #d9dee4;
+}
+.main .action .action-bottom > span {
+    font-size: 15px;
+    line-height: 45px;
+    vertical-align: text-top;
+}
+.main.main-sidebar-hide .action .action-bottom > span.left{
+    display: none;
+}
+.main.main-sidebar-show .action .action-bottom > span.right{
+    display: none;
+}
+.main.main-sidebar-show .action .action-bottom > span{
+    color: #546478;
+}
+.main.main-sidebar-show .action .action-bottom .left{
+    display: inline;
+}
+.main.main-sidebar-hide .action .action-bottom .right{
+    display: inline;
+}
+
+
+.body .main .main-body{
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.2s ease 0s;
+    width: auto;
+}
+.body .main.main-sidebar-show .main-body{
+    left: 180px;
+}
+.margin-none{
+    margin: 0;
+}
+.padding-none{
+    padding: 0;
+}
+.body-top{
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+}
+.body-top > h5{
+    float: left;
+    border-left: 2px solid #09c;
+    text-indent: 1em;
+    margin-top: 25px;
+}
+.main-box{
+    padding: 15px 0;
+}
+.lists{
+    border-bottom: 1px dashed #ccc;
+    padding: 15px 0;
+}
+.filed-name{
+    font-size: 16px;
+}
+.filed-name pub{
+    color: red;
+}
+.radius-none{
+    border-radius: 0;
+}
+span.block{
+    font-size:11px;
+    padding: 2px 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin: 0 3px 3px 0;
+    float: left;
+}
+span.block.one{
+    background:#aaa;
+}
+span.block.two{
+    background:#bbb;
+}
+span.block.three{
+    background:#ccc;
+}
+span.block.four{
+    background:#ddd;
+}
+span.block.five{
+    background:#eee;
+}
+label.block-rule{
+    font-size:14px;
+    padding: 2px 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.modal-body{
+    font-family: inherit;
+}
+div.rule-list{
+    margin: 2px 0;
+    text-align: left;
+}
+/*
+** 颜色组
+*/
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
+.status-bar{
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}

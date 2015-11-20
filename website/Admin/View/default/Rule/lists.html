@@ -1,0 +1,157 @@
+<form action="<?php echo U('Rule/sort');?>" method="post">
+    <?php if($pid):?>
+    <div class="col-xs-12 col-md-12 col-lg-12 status-bar">
+        <?php if($this->AUTH->check('Admin/Rule/sort',session('uid'))):?>
+            <button type="submit" class="btn btn-success radius-none">排序</button>
+        <?php endif;?>
+        <a href="<?php echo U('Rule/lists',['iiii'=>$ppid]);?>" class="btn btn-info radius-none">返回上一级</a>
+    </div>
+    <?php else:?>
+    <div class="col-xs-12 col-md-12 col-lg-12 status-bar">
+        <?php if($this->AUTH->check('Admin/Rule/sort',session('uid'))):?>
+            <button type="submit" class="btn btn-success radius-none">排序</button>
+        <?php endif;?>
+    </div>
+    <?php endif;?>
+    <table class="table table-hover">
+        <tr>
+            <th style="border:none;">排序</th>
+            <th style="border:none;">规则ID</th>
+            <th style="border:none;">名称</th>
+            <th style="border:none;">状态</th>
+            <th style="border:none;">NAME(路径)</th>
+            <th style="border:none;">附加规则</th>
+            <th style="border:none;">是否菜单</th>
+        </tr>
+        <?php foreach($lists as $v):?>
+        <tr>
+            <td><input type="text" name="sort[<?php echo $v[id]?>]" value="<?php echo $v['sort']?>" class="form-control radius-none text-center" style="width: 40px"></td>
+            <td><?php echo $v['id']?></td>
+            <?php if($v['child'] == 1):?>
+                <td><a href="<?php echo U('Admin/Rule/lists',['iiii'=>$v['id']])?>"><?php echo $v['title']?></a></td>
+            <?php else:?>
+                <td><?php echo $v['title']?></td>
+            <?php endif;?>
+            <?php if($v['status'] == 1):?>
+                <td><span class="green">正常</span></td>
+            <?php else:?>
+                <td><span class="red">禁用</span></td>
+            <?php endif;?>
+            <td><?php echo $v['name']?></td>
+            <td><?php echo $v['condition']?></td>
+            <?php if($v['ismenu'] == 1):?>
+                <td>菜单</td>
+            <?php else:?>
+                <td>URL</td>
+            <?php endif;?>
+            <td>
+                <?php if($this->AUTH->check('Admin/Rule/update',session('uid'))):?>
+                    <a href="<?php echo U('Rule/update',['iiii'=>$v['id']])?>" class="btn btn-primary btn-xs">修改</a>
+                <?php endif;?>
+
+                <?php if($this->AUTH->check('Admin/Ajax/ruleDelete',session('uid'))):?>
+                    <?php if($v['child'] != 1):?>
+                        <a href="javascript:;" data-iiii="<?php echo $v['id']?>" class="btn btn-danger btn-xs delete">删除</a>
+                    <?php endif;?>
+                <?php endif;?>
+
+                <?php if($this->AUTH->check('Admin/Ajax/ruleStatus',session('uid'))):?>
+                    <?php if($v['status'] ==1):?>
+                        <a href="javascript:;" data-iii="0" data-iiii="<?php echo $v['id']?>" class="btn btn-warning btn-xs status">禁用</a>
+                    <?php else:?>
+                        <a href="javascript:;" data-iii="1" data-iiii="<?php echo $v['id']?>" class="btn btn-success btn-xs status">解禁</a>
+                    <?php endif;?>
+                <?php endif;?>
+            </td>
+        </tr>
+        <?php endforeach;?>
+    </table>
+</form>
+<script>
+    $(function(){
+        <?php if($this->AUTH->check('Admin/Ajax/ruleStatus',session('uid'))):?>
+        //状态操作
+        $('.status').unbind('click');
+        $('.status').click(function(){
+            layer.load(0);
+            var _this = $(this);
+            var data = {};
+            data.iii = _this.data('iii');
+            data.iiii = _this.data('iiii');
+            $.post('<?php echo U('Ajax/ruleStatus')?>',data,function(result){
+                layer.closeAll();
+                if(result == 1){
+                    if(data.iii == 1){
+                        layer.msg('解禁成功', {shift:0});
+                        _this
+                                .removeClass('btn-success')
+                                .addClass('btn-warning')
+                                .text('禁用')
+                                .data('iii',0)
+                                .parent()
+                                .prev()
+                                .prev()
+                                .prev()
+                                .prev()
+                                .children()
+                                .removeClass('red')
+                                .addClass('green')
+                                .text('正常');
+
+                    }else{
+                        layer.msg('禁用成功', {shift:0});
+                        _this
+                                .removeClass('btn-warning')
+                                .addClass('btn-success')
+                                .text('解禁')
+                                .data('iii',1)
+                                .parent()
+                                .prev()
+                                .prev()
+                                .prev()
+                                .prev()
+                                .children()
+                                .removeClass('green')
+                                .addClass('red')
+                                .text('禁用');
+                    }
+                }else{
+                    if(data.iii == 1){
+                        layer.msg('解禁失败', {shift:6});
+                    }else{
+                        layer.msg('禁用失败', {shift:6});
+                    }
+                }
+            });
+        });
+        <?php endif;?>
+        <?php if($this->AUTH->check('Admin/Ajax/ruleDelete',session('uid'))):?>
+        //删除
+        $('.delete').unbind('click');
+        $('.delete').click(function(){
+            var data = {};
+            var _this = $(this);
+            layer.msg('确定删除吗?<br />删除之后不可回复哦!', {
+                time:0,
+                btn: ['坚决删除', '不删除'],
+                yes:function(){
+                    data.iiii = _this.data('iiii');
+                    layer.closeAll();
+                    layer.load(0, {shade: [0.3, '#000']});
+                    $.post('<?php echo U('Ajax/ruleDelete')?>',data,function(result){
+                        layer.closeAll();
+                        if(result == 1){
+                            layer.msg('删除成功', {shift:0});
+                            _this.parent().parent().fadeOut(200,function(){
+                                $(this).remove();
+                            })
+                        }else{
+                            layer.msg('删除失败', {shift:6});
+                        }
+                    });
+                },
+            });
+        });
+        <?php endif;?>
+    });
+</script>
