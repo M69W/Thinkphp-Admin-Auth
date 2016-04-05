@@ -4,7 +4,8 @@
 2.去除子域名部署模式
   1.直接将域名解析到项目目录就可以使用
 3.ningx 配置,如果是apache，请自行陪着
-server{
+
+  server{
       listen 80;
       #listen [::]:80;
       server_name admin.com www.admin.com;
@@ -31,8 +32,8 @@ server{
         	   	}
              autoindex on;
       }
-
-}
+      }
+  
 4. Mysql
 
 
