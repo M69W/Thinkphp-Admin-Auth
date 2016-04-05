@@ -1,0 +1,167 @@
+<form action="" method="post" class="_ajaxSubmit">
+    <table class="table table-hover">
+        <tr>
+            <th>用户组ID</th>
+            <th>中文名称</th>
+            <th>英文名称</th>
+            <th>状态</th>
+            <th>规则</th>
+        </tr>
+        <?php foreach($data as $v):?>
+        <tr>
+            <td><?php echo $v['id']?></td>
+            <td><?php echo $v['title']?></td>
+            <td><?php echo $v['enname']?></td>
+            <?php if($v['status']):?>
+            <td><span class="green">正常</span></td>
+            <?php else:?>
+            <td><span class="red">禁用</span></td>
+            <?php endif;?>
+            <td><?php echo $v['rules']?></td>
+            <td>
+
+            <?php if($authorization->check('Admin/Basic/Rule/update',session('uid'))):?>
+                <a href="javascript:;" data-src="<?php echo U('Admin/Basic/Group/update')?>" data-data='{"id":<?php echo $v['id']?>}' class="btn btn-primary btn-xs update">修改</a>
+            <?php endif;?>
+
+            <?php if($authorization->check('Admin/Basic/Group/delete',session('uid'))):?>
+                <?php if($v['child'] != 1):?>
+                <a href="javascript:;" data-msg="确定删除吗?" data-id="delete" data-src="<?php echo U('Admin/Basic/Group/delete')?>" data-data='{"id":<?php echo $v['id']?>}' class="btn btn-danger btn-xs _ajaxNote">删除</a>
+                <?php endif;?>
+            <?php endif;?>
+
+            <?php if($authorization->check('Admin/Basic/Group/status',session('uid'))):?>
+                <?php if($v['status'] ==1):?>
+                <a href="javascript:;" data-msg="确定要禁用吗?" data-id="status" data-src="<?php echo U('Admin/Basic/Group/status')?>" data-data='{"status":0,"id":<?php echo $v['id']?>}' class="btn btn-warning btn-xs _ajaxNote">禁用</a>
+                <?php else:?>
+                <a href="javascript:;" data-id="status" data-src="<?php echo U('Admin/Basic/Group/status')?>" data-data='{"status":1,"id":<?php echo $v['id']?>}' class="btn btn-success btn-xs _ajaxNote">解禁</a>
+                <?php endif;?>
+            <?php endif;?>
+            </td>
+        </tr>
+        <?php endforeach;?>
+    </table>
+
+</form>
+<script>
+
+    $(function(){
+
+        //修改数据
+        $('.update').click(function(){
+
+            var obj = {};
+
+            obj.url = $(this).data('src');
+
+            obj.data = $(this).data('data');
+
+            showMessage(obj);
+
+
+        });
+
+    });
+    //排序异步请求回调
+    function ajaxRequestCallback(result,id,_this)
+    {
+
+        switch(id){
+
+            case 'delete':
+
+                _delete(result, _this);
+
+                break;
+
+            case 'status':
+
+                _status(result, _this)
+
+                break;
+
+        }
+
+
+    }
+    //删除回调
+    function _delete(res, _this){
+
+        if(res.code == 200){
+
+            layer.msg(res.msg,{time:2000});
+
+            //删除当前节点
+            _this
+                    .parent()
+                    .parent()
+                    .fadeOut(2000,function(){
+
+                        $(this).remove();
+
+                    })
+
+
+        }else{
+
+            layer.msg(res.msg,function(){});
+
+        }
+
+    }
+    //修改状态回调
+    function _status(res, _this){
+
+        if(res.code == 200){
+
+            if(res.data.status == 1){
+
+                res.data.status = 0;
+
+                _this.data('msg','确定要禁用吗?');
+
+                layer.msg('解禁成功',{time:1000},function(){
+
+                    _this
+                            .removeClass('btn-success')
+                            .addClass('btn-warning')
+                            .text('禁用')
+                            .data('data',res.data)
+                            .parent()
+                            .prev()
+                            .prev()
+                            .html('<span class="green">正常</span>');
+
+                });
+
+            }else{
+
+                res.data.status = 1;
+
+                _this.data('msg','');
+
+                layer.msg('禁用成功',{time:1000},function(){
+
+                    _this
+                            .removeClass('btn-warning')
+                            .addClass('btn-success')
+                            .text('解禁')
+                            .data('data',res.data)
+                            .parent()
+                            .prev()
+                            .prev()
+                            .html('<span class="red">禁用</span>');
+
+                });
+
+            }
+
+        }else{
+
+            layer.msg(res.msg,function(){});
+
+        }
+
+    }
+
+</script>

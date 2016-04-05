@@ -1,0 +1,109 @@
+
+<form action="<?php echo U('Admin/Basic/Rule/update')?>" id="update-rule" method="post" class="_ajaxSubmit">
+    <!--<div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">-->
+        <!--<div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">选择父级 :</div>-->
+        <!--<div class="col-lg-3 col-md-5 col-xs-7 filed-from padding-none">-->
+            <!--<select class="form-control radius-none _data" disabled="disabled" name="pid">-->
+                <!--<option value="0">无父级</option>-->
+                <!--<?php echo $rules;?>-->
+            <!--</select>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">
+        <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">规则名称<pub>*</pub> :</div>
+        <div class="col-lg-3 col-md-5 col-xs-7 filed-from padding-none">
+            <input name="title" value="<?php echo $info['title']?>" type="text" autocomplete="off" class="form-control radius-none _data" placeholder="请输入规则名称(仅支持中文和英文)" >
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">
+        <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">规则标识<pub>*</pub> :</div>
+        <div class="col-lg-3 col-md-5 col-xs-7 filed-from padding-none">
+            <input name="name" value="<?php echo $info['name']?>" type="text" autocomplete="off" class="form-control radius-none _data" placeholder="规则: 模块名/控制器名/方法名(该字段唯一)">
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">
+        <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">是否是菜单:</div>
+        <div class="col-lg-3 col-md-5 col-xs-7 filed-from padding-none">
+            <div class="checkbox">
+                <?php if($info['ismenu']):?>
+
+                    <label class="radio-inline">
+                        <input  name="ismenu" checked="checked" class="_data" value="1" type="radio"> 是
+                    </label>
+
+                    <label class="radio-inline">
+                        <input  name="ismenu" class="_data" value="0" type="radio"> 否
+                    </label>
+
+                <?php else:?>
+
+                    <label class="radio-inline">
+                        <input  name="ismenu" class="_data" value="1" type="radio"> 是
+                    </label>
+
+                    <label class="radio-inline">
+                        <input  name="ismenu" checked="checked" class="_data" value="0" type="radio"> 否
+                    </label>
+
+                <?php endif;?>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">
+        <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">附加规则 :</div>
+        <div class="col-lg-3 col-md-5 col-xs-7 filed-from padding-none">
+            <input name="condition" value="<?php echo $info['condition']?>" type="text" autocomplete="off" class="form-control radius-none _data" placeholder="自定义规则">
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">
+        <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">ICON图标 :</div>
+        <div class="col-lg-3 col-md-5 col-xs-7 filed-from padding-none">
+            <input name="icon" type="text" value="<?php echo $info['icon']?>" autocomplete="off" class="form-control radius-none _data" placeholder="Font 字体图标">
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">
+        <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">状态:</div>
+        <div class="col-lg-3 col-md-5 col-xs-7 filed-from padding-none">
+            <div class="radio">
+                <?php if($info['status'] == 1): ?>
+                <label class="radio-inline">
+                    <input type="radio" checked="checked" class="_data" name="status" value="1"> 正常
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="status" class="_data" value="0"> 禁用
+                </label>
+                <?php else:?>
+                <label class="radio-inline">
+                    <input type="radio" name="status" class="_data" value="1"> 正常
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" checked="checked" name="status" class="_data" value="0"> 禁用
+                </label>
+                <?php endif;?>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-12 lists text-right">
+        <input type="hidden" name="id" class="_data" value="<?php echo $info['id']?>" />
+        <input type="hidden" name="pid" class="_data" value="<?php echo $pid;?>" />
+        <input type="submit" name="dosubmit" value="保存" class="btn btn-success radius-none">
+        <input type="reset"  value="重置" class="btn btn-info radius-none">
+    </div>
+</form>
+<script>
+    //表单异步提交回掉
+    function ajaxRequestCallback(result,id)
+    {
+
+        switch(id){
+
+            case 'update-rule':
+
+                showMessage(result.msg,result.code,'<?php echo U("Admin/Basic/Rule/lists")?>',{'pid':result.data.pid},2000);
+
+                break;
+
+        }
+
+    }
+</script>

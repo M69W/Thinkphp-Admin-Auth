@@ -1,0 +1,153 @@
+<form action="<?php echo U('Admin/Basic/Group/create')?>" id="create-group" method="post" class="_ajaxSubmit">
+    <div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">
+        <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">中文名称<pub>*</pub> :</div>
+        <div class="col-lg-3 col-md-5 col-xs-7 filed-from padding-none">
+            <input name="title" type="text" autocomplete="off" class="form-control radius-none _data" placeholder="请输入用户组中文名称" >
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">
+        <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">规则授权<pub>*</pub> :</div>
+        <div class="col-lg-10 col-md-9 col-xs-7 filed-from padding-none rule-lists">
+            <?php echo $ruleTree;?>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">
+        <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">备注描述 :</div>
+        <div class="col-lg-3 col-md-5 col-xs-7 filed-from padding-none">
+            <textarea name="description" class="form-control radius-none _data"></textarea>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-12 lists text-right">
+        <input type="hidden" name="rules" class="_data">
+        <input type="submit" name="dosubmit" value="保存" class="btn btn-success radius-none">
+        <input type="reset"  value="重置" class="btn btn-info radius-none">
+    </div>
+</form>
+<script>
+    $(function(){
+
+        //授权规则全选反选
+        $('input[type="checkbox"]','.rules').click(function(){
+
+            var _this = $(this);
+
+            var id = _this.attr('id');
+
+            var pid = _this.attr('pid');
+
+            var isChecked = _this.is(':checked');
+
+            //_child(id,isChecked);
+            //_parent(pid,_this);
+            $.when(_child(id,isChecked),_parent(pid,_this))
+
+                .then(function(){
+
+                    var rules = '';
+                    //console.log($('input[type="checkbox"]:checked','.rules'));
+                   $('input[type="checkbox"]:checked','.rules').each(function(i,v){
+
+                       if(!i){
+                           rules += $(this).val();
+                       }else{
+                           rules += ','+$(this).val();
+                       }
+
+                   });
+
+                   $('input[name="rules"]').val(rules);
+
+                });
+
+        });
+
+    });
+
+    function _child(id,isChecked){
+
+        //获取所有当前节点子节点
+        var _childNote = $('input[pid="'+id+'"]');
+
+
+        if(_childNote.length > 0){
+
+            //如果有子节点,改变节点状态
+            _childNote.each(function(){
+
+                this.checked = isChecked;
+
+                var id = $(this).attr('id');
+
+                //递归检测
+                _child(id,isChecked);
+
+            });
+
+        }else{
+            return false
+        }
+    }
+
+    function _parent(pid,_this){
+
+
+        var _parentNote = $('input[id="'+pid+'"]');
+
+        if(_parentNote.length < 1)return false;
+        //判断当前节点所有兄弟节点是否有选中
+
+        var $brothers = _this
+                        .parent()
+                        .parent()
+                        .children('label')
+                        .children();
+
+        //
+        var isAllChecked = false;
+
+        var _parentNote = $('input[id="'+pid+'"]');
+
+        var _ppid = _parentNote.attr('pid');
+
+        //检测当前节点的兄弟节点是否有选中, 只要有一个是选中的  父级就为选中状态
+        $brothers.each(function(){
+
+            if(this.checked){
+
+                isAllChecked = true;
+
+            }
+
+        });
+
+        //设置父级状态
+        if(isAllChecked){
+
+            _parentNote[0].checked = true;
+
+        }else{
+
+            _parentNote[0].checked = false;
+
+        }
+
+        //递归检测
+        _parent(_ppid,_parentNote);
+
+    }
+
+    //数据提交回调
+    function ajaxRequestCallback(result,id,_this){
+
+        if(result.code == 200){
+
+            layer.msg(result.msg);
+
+        }else{
+
+            layer.msg(result.msg,function(){});
+
+        }
+
+    }
+</script>

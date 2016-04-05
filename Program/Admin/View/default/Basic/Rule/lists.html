@@ -1,0 +1,241 @@
+<form action="<?php echo U('Admin/Basic/Rule/sort');?>" method="post" id="rule-sort" class="_ajaxSubmit">
+
+<?php if($authorization->check('Admin/Index/index/_index',session('uid'))):?>
+    <?php if($pid):?>
+    <div class="col-xs-12 col-md-12 col-lg-12 status-bar">
+            <button type="submit" class="btn btn-success radius-none">排序</button>
+        <a href="javascript:;" data-ppid="<?php echo $ppid?>" class="btn btn-info radius-none go-prev">返回上一级</a>
+    </div>
+    <?php else:?>
+    <div class="col-xs-12 col-md-12 col-lg-12 status-bar">
+            <button type="submit" class="btn btn-success radius-none">排序</button>
+    </div>
+    <?php endif;?>
+<?php endif;?>
+
+    <table class="table table-hover">
+        <tr>
+            <th style="border:none;">排序</th>
+            <th style="border:none;">规则ID</th>
+            <th style="border:none;">名称</th>
+            <th style="border:none;">状态</th>
+            <th style="border:none;">NAME(路径)</th>
+            <th style="border:none;">附加规则</th>
+            <th style="border:none;">是否菜单</th>
+        </tr>
+        <?php foreach($lists as $v):?>
+        <tr>
+            <td><input type="text" name="<?php echo $v[id]?>" value="<?php echo $v['sort']?>" class="text-center _data" style="width: 40px"></td>
+            <td><?php echo $v['id']?></td>
+
+            <?php if($v['child'] == 1):?>
+                <td><a class="load-child" href="javascript:;" data-id="<?php echo $v['id']?>" data-href="<?php echo U('Admin/Basic/Rule/lists');?>"><?php echo $v['title']?></a></td>
+            <?php else:?>
+
+                <td><?php echo $v['title']?></td>
+            <?php endif;?>
+            <?php if($v['status'] == 1):?>
+                <td><span class="green">正常</span></td>
+            <?php else:?>
+                <td><span class="red">禁用</span></td>
+            <?php endif;?>
+            <td><?php echo $v['name']?></td>
+            <td><?php echo $v['condition']?></td>
+            <?php if($v['ismenu'] == 1):?>
+                <td>菜单</td>
+            <?php else:?>
+                <td>URL</td>
+            <?php endif;?>
+            <td>
+
+                <?php if($authorization->check('Admin/Basic/Rule/update',session('uid'))):?>
+                    <a href="javascript:;" data-src="<?php echo U('Admin/Basic/Rule/update')?>" data-data='{"pid":<?php echo $pid;?>,"id":<?php echo $v['id']?>}' class="btn btn-primary btn-xs update">修改</a>
+                <?php endif;?>
+
+                <?php if($authorization->check('Admin/Basic/Rule/delete',session('uid'))):?>
+                    <?php if($v['child'] != 1):?>
+                        <a href="javascript:;" data-msg="确定删除吗?" data-id="delete" data-src="<?php echo U('Admin/Basic/Rule/delete')?>" data-data="<?php echo $v['id']?>" class="btn btn-danger btn-xs _ajaxNote">删除</a>
+                    <?php endif;?>
+                <?php endif;?>
+
+                <?php if($authorization->check('Admin/Basic/Rule/status',session('uid'))):?>
+                    <?php if($v['status'] ==1):?>
+                        <a href="javascript:;" data-msg="确定要禁用吗?" data-id="status" data-src="<?php echo U('Admin/Basic/Rule/status')?>" data-data='{"status":0,"id":<?php echo $v['id']?>}' class="btn btn-warning btn-xs _ajaxNote">禁用</a>
+                    <?php else:?>
+                        <a href="javascript:;" data-id="status" data-src="<?php echo U('Admin/Basic/Rule/status')?>" data-data='{"status":1,"id":<?php echo $v['id']?>}' class="btn btn-success btn-xs _ajaxNote">解禁</a>
+                    <?php endif;?>
+                <?php endif;?>
+
+            </td>
+        </tr>
+        <?php endforeach;?>
+    </table>
+</form>
+
+
+
+
+<script>
+    $(function(){
+
+        //修改规则
+        $('.update').unbind('click');
+        $('.update').click(function(){
+
+            var src = $(this).data('src');
+            var data = $(this).data('data');
+
+            showMessage('',false,src,{'data':data},1);
+
+        });
+
+
+        //加载子规则列表
+        $('.load-child').unbind('click');
+        $('.load-child').click(function(){
+
+            var pid = $(this).data('id');
+
+            var url = $(this).data('href');
+
+            showMessage('',false,url,{'pid' : pid},1);
+
+
+        })
+
+        <?php if($pid):?>
+        /*
+         * 返回上一级
+         */
+        $('.go-prev').unbind('click');
+        $('.go-prev').click(function(){
+
+            var obj = {}
+
+            obj.url = '<?php echo U('/Admin/Basic/Rule/lists');?>';
+
+            obj.data = {pid:<?php echo $ppid ? $ppid : 0 ;?>};
+            obj.time
+
+
+            showMessage(obj);
+
+        });
+    <?php endif;?>
+
+
+    });
+
+    //排序异步请求回调
+    function ajaxRequestCallback(result,id,_this)
+    {
+
+        switch(id){
+
+            case 'rule-sort':
+
+                    showMessage(result.msg,result.code,'<?php echo U("/Admin/Basic/Rule/lists")?>',{pid:'<?php echo $pid?$pid:0;?>'},2000);
+
+                break;
+
+
+            case 'delete':
+
+                    _delete(result, _this);
+
+                break;
+
+            case 'status':
+
+                    _status(result, _this)
+
+                break;
+
+        }
+
+
+    }
+    //删除回调
+    function _delete(res, _this){
+
+        if(res.code == 200){
+
+            layer.msg(res.msg,{time:2000});
+
+            //删除当前节点
+            _this
+                    .parent()
+                    .parent()
+                    .fadeOut(2000,function(){
+
+                        $(this).remove();
+
+                    })
+
+
+        }else{
+
+            layer.msg(res.msg,function(){});
+
+        }
+
+    }
+    //修改状态回调
+    function _status(res, _this){
+
+        if(res.code == 200){
+
+            if(res.data.status == 1){
+
+                res.data.status = 0;
+
+                _this.data('msg','确定要禁用吗?');
+
+                layer.msg('解禁成功',{time:1000},function(){
+
+                    _this
+                            .removeClass('btn-success')
+                            .addClass('btn-warning')
+                            .text('禁用')
+                            .data('data',res.data)
+                            .parent()
+                            .prev()
+                            .prev()
+                            .prev()
+                            .prev()
+                            .html('<span class="green">正常</span>');
+
+                });
+
+            }else{
+
+                res.data.status = 1;
+
+                _this.data('msg','');
+
+                layer.msg('禁用成功',{time:1000},function(){
+
+                    _this
+                            .removeClass('btn-warning')
+                            .addClass('btn-success')
+                            .text('解禁')
+                            .data('data',res.data)
+                            .parent()
+                            .prev()
+                            .prev()
+                            .prev()
+                            .prev()
+                            .html('<span class="red">禁用</span>');
+
+                });
+
+            }
+
+        }else{
+
+            layer.msg(res.msg,function(){});
+
+        }
+
+    }
+</script>

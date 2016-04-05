@@ -1,0 +1,94 @@
+<form action="<?php echo U('Admin/Basic/Administrator/create');?>" id="create-admin" class="_ajaxSubmit" method="post">
+    <div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">
+        <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">管理组<pub>*</pub> :</div>
+        <div class="col-lg-10 col-md-9 col-xs-7 filed-from padding-none">
+            <?php foreach($groups as $v):?>
+            <span class="block">
+                <label>
+                    <input type="checkbox" value="<?php echo $v['id']?>">
+                    &nbsp;&nbsp;
+                    <?php echo $v['title']?>
+                </label>
+            </span>
+            <?php endforeach;?>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">
+        <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">用户名<pub>*</pub> :</div>
+        <div class="col-lg-3 col-md-5 col-xs-7 filed-from padding-none">
+            <input name="username" type="text" autocomplete="off" class="form-control radius-none _data" placeholder="请输入管理员用户名" >
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">
+        <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">管理密码<pub>*</pub> :</div>
+        <div class="col-lg-3 col-md-5 col-xs-7 filed-from padding-none">
+            <input name="password" type="text" autocomplete="off" class="form-control radius-none _data">
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">
+        <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">中文名字<pub>*</pub> :</div>
+        <div class="col-lg-3 col-md-5 col-xs-7 filed-from padding-none">
+            <input name="truename" type="text" autocomplete="off" class="form-control radius-none _data" placeholder="请输入中文名称" >
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">
+        <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">手机号码<pub>*</pub> :</div>
+        <div class="col-lg-3 col-md-5 col-xs-7 filed-from padding-none">
+            <input name="mobile" type="number" autocomplete="off" class="form-control radius-none _data" placeholder="请输入手机号码" >
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">
+        <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">电子邮箱<pub>*</pub> :</div>
+        <div class="col-lg-3 col-md-5 col-xs-7 filed-from padding-none">
+            <input name="email" type="email" autocomplete="off" class="form-control radius-none _data" placeholder="请输入管理电子邮箱" >
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-12 padding-none lists">
+        <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">备注描述 :</div>
+        <div class="col-lg-3 col-md-5 col-xs-7 filed-from padding-none">
+            <textarea name="remark" class="form-control radius-none _data"></textarea>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-12 col-lg-12 lists text-right">
+        <input type="hidden" name="group" class="_data">
+        <input type="submit" name="dosubmit" value="保存" class="btn btn-success radius-none">
+        <input type="reset"  value="重置" class="btn btn-info radius-none">
+    </div>
+</form>
+<script>
+    $(function(){
+
+        $('input[type="checkbox"]','._ajaxSubmit').unbind('click');
+        $('input[type="checkbox"]','._ajaxSubmit').click(function(){
+
+            var ids = '';
+
+            $('input[type="checkbox"]:checked','._ajaxSubmit').each(function(i,v){
+
+                ids += $(this).val()+',';
+
+            });
+
+            ids = ids.substring(0,(ids.length -1));
+
+            $('input[name="group"]').val(ids);
+
+        });
+
+    });
+
+    //数据提交回调
+    function ajaxRequestCallback(result,id,_this){
+
+        if(result.code == 200){
+
+            layer.msg(result.msg);
+
+        }else{
+
+            layer.msg(result.msg,function(){});
+
+        }
+
+    }
+</script>

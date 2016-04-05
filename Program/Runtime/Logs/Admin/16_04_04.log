@@ -1,0 +1,624 @@
+[ 2016-04-04T17:54:42+08:00 ] 192.168.171.1 /Admin/Index/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000129s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000096s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000086s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000121s ]
+
+[ 2016-04-04T17:54:42+08:00 ] 192.168.171.1 /Admin/Index/index/loadMenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000074s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000095s ]
+
+[ 2016-04-04T17:54:42+08:00 ] 192.168.171.1 /Admin/Index/Index/_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000171s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000124s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2016-04-04T17:54:51+08:00 ] 192.168.171.1 /Admin/Index/Sign/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000037s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000057s ]
+
+[ 2016-04-04T17:54:51+08:00 ] 192.168.171.1 /Admin/Index/Sign/authcode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000236s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000203s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000269s ]
+
+[ 2016-04-04T17:56:03+08:00 ] 192.168.171.1 /Admin/Index/Sign/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000171s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000093s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000171s ]
+
+[ 2016-04-04T17:56:03+08:00 ] 192.168.171.1 /Admin/Index/Sign/authcode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000097s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000163s ]
+
+[ 2016-04-04T17:56:13+08:00 ] 192.168.171.1 /Admin/Index/Sign/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+
+[ 2016-04-04T17:56:13+08:00 ] 192.168.171.1 /Admin/Index/Sign/authcode.html?t=0.2784993483221623
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000144s ]
+
+[ 2016-04-04T17:56:19+08:00 ] 192.168.171.1 /Admin/Index/Sign/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000056s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+
+[ 2016-04-04T17:56:20+08:00 ] 192.168.171.1 /Admin/Index/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000156s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000093s ]
+
+[ 2016-04-04T17:56:20+08:00 ] 192.168.171.1 /Admin/Index/index/loadMenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000075s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000094s ]
+
+[ 2016-04-04T17:56:20+08:00 ] 192.168.171.1 /Admin/Index/Index/_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000079s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000071s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000092s ]
+
+[ 2016-04-04T17:56:23+08:00 ] 192.168.171.1 /Admin/Index/index/loadMenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000086s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000102s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2016-04-04T17:56:24+08:00 ] 192.168.171.1 /Admin/Index/index/loadMenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] Undefined index: children /Test/Admin/Program/Admin/View/default/Index/menu/third.html 第 2 行.
+NOTIC: [8] Undefined index: children /Test/Admin/Program/Admin/View/default/Index/menu/third.html 第 2 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2016-04-04T17:56:24+08:00 ] 192.168.171.1 /Admin/Basic/Rule/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000155s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Test/Admin/Program/Admin/View/default/Basic/Rule/lists.html 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Test/Admin/Program/Admin/View/default/Basic/Rule/lists.html 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Test/Admin/Program/Admin/View/default/Basic/Rule/lists.html 第 28 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2016-04-04T17:56:26+08:00 ] 192.168.171.1 /Admin/Basic/Rule/create
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000157s ]
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000066s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000085s ]
+
+[ 2016-04-04T17:56:27+08:00 ] 192.168.171.1 /Admin/Basic/Rule/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Test/Admin/Program/Admin/View/default/Basic/Rule/lists.html 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Test/Admin/Program/Admin/View/default/Basic/Rule/lists.html 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Test/Admin/Program/Admin/View/default/Basic/Rule/lists.html 第 28 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000094s ]
+
+[ 2016-04-04T17:56:27+08:00 ] 192.168.171.1 /Admin/Basic/Rule/create
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+NOTIC: [8] Undefined index: child /Test/Admin/ThinkPHP/Library/Org/Util/Tree.class.php 第 108 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000071s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000135s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000089s ]
+
+[ 2016-04-04T17:56:29+08:00 ] 192.168.171.1 /Admin/Index/Sign/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000275s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000311s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000399s ]
+
+[ 2016-04-04T17:56:29+08:00 ] 192.168.171.1 /Admin/Index/Sign/authcode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000163s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000251s ]
+
+[ 2016-04-04T17:56:34+08:00 ] 192.168.171.1 /Admin/Index/Sign/authcode.html?t=0.375971228867819
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000089s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000156s ]
+
+[ 2016-04-04T17:56:39+08:00 ] 192.168.171.1 /Admin/Index/Sign/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000067s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000105s ]
+
+[ 2016-04-04T17:56:40+08:00 ] 192.168.171.1 /Admin/Index/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000078s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2016-04-04T17:56:40+08:00 ] 192.168.171.1 /Admin/Index/index/loadMenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2016-04-04T17:56:40+08:00 ] 192.168.171.1 /Admin/Index/Index/_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000111s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2016-04-04T17:56:42+08:00 ] 192.168.171.1 /Admin/Index/index/loadMenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000087s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000068s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2016-04-04T17:56:42+08:00 ] 192.168.171.1 /Admin/Index/index/loadMenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+NOTIC: [8] Undefined index: children /Test/Admin/Program/Admin/View/default/Index/menu/third.html 第 2 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000410s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000588s ]
+
+[ 2016-04-04T17:56:42+08:00 ] 192.168.171.1 /Admin/Statistics/Server/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000181s ]
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 88 行.
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 93 行.
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 104 行.
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 126 行.
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 137 行.
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 141 行.
+NOTIC: [8] Undefined index: mhz /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 212 行.
+NOTIC: [8] Undefined index: cache /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 213 行.
+NOTIC: [8] Undefined index: bogomips /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 214 行.
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 506 行.
+NOTIC: [8] Undefined index: win_n /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 614 行.
+NOTIC: [8] Use of undefined constant php - assumed 'php' /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 632 行.
+NOTIC: [8] Undefined index: SERVER_ADMIN /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 636 行.
+NOTIC: [8] Use of undefined constant php - assumed 'php' /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 638 行.
+NOTIC: [8] Use of undefined constant PHP_SELF - assumed 'PHP_SELF' /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 769 行.
+NOTIC: [8] Use of undefined constant PHP_SELF - assumed 'PHP_SELF' /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 769 行.
+NOTIC: [8192] Function eregi() is deprecated /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 772 行.
+NOTIC: [8] Use of undefined constant gd_info - assumed 'gd_info' /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 934 行.
+NOTIC: [8192] mysql_get_server_info(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 1018 行.
+NOTIC: [2] mysql_get_server_info(): Access denied for user ''@'localhost' (using password: NO) /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 1018 行.
+NOTIC: [2] mysql_get_server_info(): A link to the server could not be established /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 1018 行.
+NOTIC: [8] Use of undefined constant versionString - assumed 'versionString' /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 1042 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000123s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000229s ]
+
+[ 2016-04-04T17:56:42+08:00 ] 192.168.171.1 /Admin/Statistics/Server/index.html?act=rt&callback=jQuery21006602208623877562_1459763800377&_=1459763800378
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000136s ]
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 126 行.
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 137 行.
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 141 行.
+NOTIC: [8] Undefined index: mhz /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 212 行.
+NOTIC: [8] Undefined index: cache /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 213 行.
+NOTIC: [8] Undefined index: bogomips /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 214 行.
+NOTIC: [8] Undefined variable: freetime /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined variable: bjtime /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 5 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 6 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 7 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 8 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 9 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 10 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 5 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 6 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 7 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 8 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 9 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 10 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+
+[ 2016-04-04T17:56:43+08:00 ] 192.168.171.1 /Admin/Statistics/Server/index.html?act=rt&callback=jQuery21006602208623877562_1459763800377&_=1459763800379
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000085s ]
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 126 行.
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 137 行.
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 141 行.
+NOTIC: [8] Undefined index: mhz /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 212 行.
+NOTIC: [8] Undefined index: cache /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 213 行.
+NOTIC: [8] Undefined index: bogomips /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 214 行.
+NOTIC: [8] Undefined variable: freetime /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined variable: bjtime /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 5 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 6 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 7 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 8 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 9 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 10 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 5 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 6 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 7 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 8 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 9 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 10 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+
+[ 2016-04-04T17:56:44+08:00 ] 192.168.171.1 /Admin/Statistics/Server/index.html?act=rt&callback=jQuery21006602208623877562_1459763800377&_=1459763800380
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000149s ]
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 126 行.
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 137 行.
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 141 行.
+NOTIC: [8] Undefined index: mhz /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 212 行.
+NOTIC: [8] Undefined index: cache /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 213 行.
+NOTIC: [8] Undefined index: bogomips /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 214 行.
+NOTIC: [8] Undefined variable: freetime /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined variable: bjtime /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 5 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 6 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 7 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 8 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 9 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 10 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 5 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 6 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 7 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 8 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 9 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 10 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+
+[ 2016-04-04T17:56:45+08:00 ] 192.168.171.1 /Admin/Statistics/Server/index.html?act=rt&callback=jQuery21006602208623877562_1459763800377&_=1459763800381
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000127s ]
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 126 行.
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 137 行.
+NOTIC: [8] Undefined index: act /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 141 行.
+NOTIC: [8] Undefined index: mhz /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 212 行.
+NOTIC: [8] Undefined index: cache /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 213 行.
+NOTIC: [8] Undefined index: bogomips /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 214 行.
+NOTIC: [8] Undefined variable: freetime /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined variable: bjtime /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 5 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 6 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 7 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 8 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 9 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 10 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 5 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 6 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 7 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 8 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 9 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+NOTIC: [8] Undefined offset: 10 /Test/Admin/Program/Admin/View/default/Statistics/Server/index.html 第 508 行.
+
+[ 2016-04-04T17:56:45+08:00 ] 192.168.171.1 /Admin/Index/index/loadMenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000055s ]
+
+[ 2016-04-04T17:56:45+08:00 ] 192.168.171.1 /Admin/Index/index/loadMenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Undefined index: children /Test/Admin/Program/Admin/View/default/Index/menu/third.html 第 2 行.
+NOTIC: [8] Undefined index: children /Test/Admin/Program/Admin/View/default/Index/menu/third.html 第 2 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000053s ]
+
+[ 2016-04-04T17:56:46+08:00 ] 192.168.171.1 /Admin/Basic/Rule/lists
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000170s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Test/Admin/Program/Admin/View/default/Basic/Rule/lists.html 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Test/Admin/Program/Admin/View/default/Basic/Rule/lists.html 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /Test/Admin/Program/Admin/View/default/Basic/Rule/lists.html 第 28 行.
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000053s ]
+
+[ 2016-04-04T17:56:46+08:00 ] 192.168.171.1 /Admin/Index/index/loadMenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000105s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2016-04-04T17:56:46+08:00 ] 192.168.171.1 /Admin/Index/Index/_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000142s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000069s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000116s ]
+

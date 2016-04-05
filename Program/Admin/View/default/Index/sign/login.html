@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>令鹿站点管理系统-登录</title>
+    <meta name="keywords" content="网站模板,手机网站模板,手机登录页面,登录页面HTML,免费网站模板下载">
+    <meta name="description" content="JS代码网提供高质量手机网站模板下载">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/statics/admin/css/reset.css">
+    <link rel="stylesheet" href="/statics/admin/css/supersized.css">
+    <link rel="stylesheet" href="/statics/admin/css/login.css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<div class="page-container">
+    <h1>令鹿站点管理系统</h1>
+    <form>
+
+        <input name="username" class="username" placeholder="用户名" type="text">
+
+        <input name="password" class="password" placeholder="密码" type="password">
+
+        <input name="authcode" class="authcode" placeholder="验证码" type="text">
+
+        <div class="code">
+            <div class="triangle-left"></div>
+            <img src="<?php echo U('Admin/Index/Sign/authcode');?>" />
+        </div>
+
+        <button type="submit">立即登录</button>
+    </form>
+    <div class="connect">
+        <p>Copyright @ cdlinlu.com</p>
+    </div>
+
+    <!-- Javascript -->
+    <script src="/statics/admin/js/jquery-1.8.2.min.js"></script>
+    <script src="/statics/admin/js/supersized.js"></script>
+    <script src="/statics/common/plugins/layer/layer.js"></script>
+    <script src="/statics/common/plugins/layer/extend/layer.ext.js"></script>
+
+</body>
+<script>
+    $(function(){
+        $.supersized({
+            // Functionality
+            slide_interval     : 4000,    // Length between transitions
+            transition         : 1,    // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+            transition_speed   : 1000,    // Speed of transition
+            performance        : 1,    // 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
+
+            // Size & Position
+            min_width          : 0,    // Min width allowed (in pixels)
+            min_height         : 0,    // Min height allowed (in pixels)
+            vertical_center    : 1,    // Vertically center background
+            horizontal_center  : 1,    // Horizontally center background
+            fit_always         : 0,    // Image will never exceed browser width or height (Ignores min. dimensions)
+            fit_portrait       : 1,    // Portrait images will not exceed browser height
+            fit_landscape      : 0,    // Landscape images will not exceed browser width
+
+            // Components
+            slide_links        : 'blank',    // Individual links for each slide (Options: false, 'num', 'name', 'blank')
+            slides             : [    // Slideshow Images
+                {image : '/statics/admin/images/1.jpg'},
+                {image : '/statics/admin/images/2.jpg'},
+                {image : '/statics/admin/images/3.jpg'}
+            ]
+
+        });
+
+        $('.code').click(function(){
+
+            var url = "<?php echo U('Admin/Index/Sign/authcode')?>?t="+Math.random();
+
+            $(this).children('img').attr('src',url);
+
+        });
+
+        $('form').keydown(function(event){
+
+
+
+
+//            if(event.keyCode == 13){
+//                $(this).submit();
+//            }
+
+        });
+
+        $('form').unbind('submit');
+        $('form').submit(function(){
+
+            var _this = $(this);
+            var data = {};
+
+            data.username = $('input[name="username"]',_this).val();
+            data.password = $('input[name="password"]',_this).val();
+            data.authcode = $('input[name="authcode"]',_this).val();
+
+
+            if(data.username == ''){
+                var url = "<?php echo U('Admin/Index/Sign/authcode')?>?t="+Math.random();
+                $('.code > img').attr('src',url);
+
+                layer.msg('用户名不能为空',function(){});
+
+            }else if(data.password == ''){
+                var url = "<?php echo U('Admin/Index/Sign/authcode')?>?t="+Math.random();
+                $('.code > img').attr('src',url);
+
+                layer.msg('密码不能为空',function(){});
+
+            }else if(data.authcode == ''){
+                var url = "<?php echo U('Admin/Index/Sign/authcode')?>?t="+Math.random();
+                $('.code > img').attr('src',url);
+
+                layer.msg('验证码不能为空',function(){});
+
+            }else{
+
+                $.post('<?php echo U("Admin/Index/Sign/login")?>',{'data':data},function(result){
+
+
+
+                    if(result.code == 200){
+
+                        layer.msg(result.msg,{time:1000},function(){
+
+                            window.location.href = result.data.url;
+
+                        });
+
+                    }else{
+                        var url = "<?php echo U('Admin/Index/Sign/authcode')?>?t="+Math.random();
+                        $('.code > img').attr('src',url);
+
+                        layer.msg(result.msg,function(){})
+
+                    }
+
+
+                })
+
+            }
+            return false;
+
+        });
+
+    });
+</script>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>令鹿站点管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/statics/common/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/statics/common/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/statics/admin/css/styles.css">
+    <script src="/statics/common/plugins/jquery-2.1.0.min.js"></script>
+</head>
+<body>
+<nav class="navbar nav-style navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">LingLu</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" id="menu1">
+                <?php foreach($firstMenu as $k => $v):?>
+
+                    <?php 
+                        if($k == 0):
+
+                    ?>
+                        <li>
+                            <a href="javascript:;" data-name="<?php echo $v['title']?>" class="menu" data-loadChild="<?php echo $v['child'];?>" data-src="/<?php echo trim(U($v['name']),'/')?>" data-level="1"  data-id="<?php echo $v['id']?>"><?php echo $v['title']?></a>
+                        </li>
+                    <?php else:?>
+
+                        <li>
+                            <a href="javascript:;" data-name="<?php echo $v['title']?>" class="menu" data-src="/<?php echo trim(U($v['name']),'/')?>" data-loadChild="<?php echo $v['child'];?>" data-level="1" data-id="<?php echo $v['id']?>"><?php echo $v['title']?></a>
+                        </li>
+
+                    <?php endif?>
+                <?php endforeach;?>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Hi,
+                        <?php
+
+                            if($thisAdmin['truename']){
+
+                                echo $thisAdmin['truename'];
+
+                            }elseif($thisAdmin['nicname']){
+
+                                echo $thisAdmin['nicname'];
+
+                            }else{
+
+                                echo $thisAdmin['username'];
+
+                            }
+
+                        ?>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!--<li><a href="#">锁屏</a></li>-->
+                        <li><a href="<?php echo U('Admin/Index/Sign/login')?>">退出</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="javascript:void(0)">当前 IP: <?php echo $thisAdmin['nowip']?></a></li>
+                        <li><a href="javascript:void(0)">上次 IP: <?php echo $thisAdmin['lastip']?></a></li>
+                        <li><a id="time" href="javascript:void(0)">当前时间: 2015/11/09 21:01</a></li>
+                        <li><a href="javascript:void(0)">上次登录: <?php echo date('Y/m/d H:i:s',$thisAdmin['lasttime'])?></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container-fluid body sidebar-full">
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-fold">
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
+            </div>
+            <ul  id="menu2">
+
+            </ul>
+        </div>
+    </div>
+    <div class="main main-sidebar-show">
+        <div class="main-sidebar">
+            <div class="main-sidebar-body">
+                <div class="main-sidebar-body-title" id="second-title"></div>
+            </div>
+            <div class="main-sidebar-list">
+                <ul id="menu3"></ul>
+            </div>
+        </div>
+        <div class="action">
+            <div class="action-icon"></div>
+            <div class="action-bottom">
+                <span class="glyphicon glyphicon-hand-left left" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-hand-right right" aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="main-body">
+            <div class="col-xs-12 col-md-12 col-lg-12">
+                <div class="col-xs-12 col-md-12 col-lg-12 body-top padding-none">
+                    <h5 id="main-title">新增</h5>
+                </div>
+                <div class="col-xs-12 col-md-12 col-lg-12 main-box" id="main-content"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var loadMenuUrl = "<?php echo U('Admin/Index/index/loadMenu');?>"
+</script>
+<script src="/statics/common/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="/statics/common/plugins/layer/layer.js"></script>
+<script src="/statics/common/plugins/layer/extend/layer.ext.js"></script>
+
+<script src="/statics/admin/js/admin.js"></script>
+<script>
+    $(function(){
+        Admin.sidebar();
+        Admin.menuEvent('.menu');
+        Admin.Time();
+        Admin.ajaxRequest();
+    });
+</script>
+</body>
+</html>

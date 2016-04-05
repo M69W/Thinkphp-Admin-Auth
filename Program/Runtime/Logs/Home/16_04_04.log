@@ -1,0 +1,15 @@
+[ 2016-04-04T17:54:52+08:00 ] 192.168.171.1 /statics/admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+
+[ 2016-04-04T17:54:58+08:00 ] 192.168.171.1 /statics/admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000063s ]
+
+[ 2016-04-04T17:55:01+08:00 ] 192.168.171.1 /statics/admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+

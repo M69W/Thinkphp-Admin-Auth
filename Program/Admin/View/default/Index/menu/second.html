@@ -1,0 +1,19 @@
+<?php foreach($menu as $k => $v):?>
+
+    <?php
+
+        $icon = 'glyphicon glyphicon-globe';
+
+            if($v['icon'])
+                $icon = $v['icon'];
+?>
+
+        <li>
+            <a href="javascript:;" class="menu" data-name="<?php echo $v['title']?>" data-loadChild="<?php echo $v['child'];?>" data-src="/<?php echo trim(U($v['name']),'/')?>" data-id="<?php echo $v['id']?>"  data-level="2">
+                <div class="nav-icon">
+                    <span class="<?php echo $icon?>" aria-hidden="true"></span>
+                </div>
+                <span class="nav-title"><?php echo $v['title']?></span>
+            </a>
+        </li>
+<?php endforeach;?>

@@ -1,0 +1,181 @@
+<table class="table table-hover">
+    <tr>
+        <th>ID</th>
+        <th>姓名</th>
+        <th>用户名</th>
+        <th>手机号码</th>
+        <th>邮箱</th>
+        <th>上次登录时间</th>
+        <th>登录次数</th>
+    </tr>
+    <?php foreach($data as $v):?>
+    <tr>
+        <td><?php echo $v['userid']?></td>
+        <td><?php echo $v['truename']?></td>
+        <td><?php echo $v['username']?></td>
+        <td><?php echo $v['mobile']?></td>
+        <td><?php echo $v['email']?></td>
+        <td><?php echo date('Y/m/d H:i',$v['nowtime'])?></td>
+        <td><?php echo $v['loginnums']?></td>
+        <td>
+            <?php if($authorization->check('Admin/Basic/Administrator/authorization',session('uid'))):?>
+            <a href="javascript:;" data-userid="<?php echo $v['userid']?>" class="btn btn-info btn-xs authorization">授权</a>
+            <?php endif;?>
+
+            <?php if($authorization->check('Admin/Basic/Administrator/update',session('uid'))):?>
+            <a href="javascript:;" data-userid="<?php echo $v['userid']?>" class="btn btn-primary btn-xs update">修改</a>
+            <?php endif;?>
+
+            <?php if($v['userid'] != 1):?>
+                <?php if($authorization->check('Admin/Basic/Administrator/delete',session('uid'))):?>
+                <a href="javascript:;" data-msg="确定删除吗?" data-id="delete" data-src="<?php echo U('Admin/Basic/Administrator/delete')?>" data-data="<?php echo $v['userid']?>" class="btn btn-danger btn-xs delete _ajaxNote">删除</a>
+                <?php endif;?>
+            <?php endif;?>
+
+            <?php if($authorization->check('Admin/Basic/Administrator/status',session('uid'))):?>
+                <?php if($v['status'] ==1):?>
+                <a href="javascript:;" data-msg="确定要禁用吗?" data-id="status" data-src="<?php echo U('Admin/Basic/Administrator/status')?>" data-data='{"status":0,"userid":<?php echo $v['userid']?>}' class="btn btn-warning btn-xs _ajaxNote">禁用</a>
+                <?php else:?>
+                <a href="javascript:;" data-id="status" data-src="<?php echo U('Admin/Basic/Administrator/status')?>" data-data='{"status":1,"userid":<?php echo $v['userid']?>}' class="btn btn-success btn-xs _ajaxNote">解禁</a>
+                <?php endif;?>
+            <?php endif;?>
+        </td>
+    </tr>
+    <?php endforeach;?>
+</table>
+<script>
+
+    $(function(){
+
+        $('.update').unbind('click');
+        $('.update').click(function(){
+
+            var obj = {};
+
+            obj.url = "<?php echo U('Admin/Basic/Administrator/update')?>";
+
+            obj.data = {'userid':$(this).data('userid')};
+
+            showMessage(obj);
+
+
+        });
+        //管理员授权操作
+        $('.authorization').unbind('click');
+        $('.authorization').click(function(){
+
+            layer.load();
+
+            var userid = $(this).data('userid');
+
+            $.post("<?php echo U('Admin/Basic/Administrator/authorization')?>",{'userid':userid},function(result){
+
+                layer.closeAll();
+
+                layer.open({
+                    type: 1,
+                    title: '管理员授权',
+                    skin: 'layui-layer-rim', //加上边框
+                    area: ['50%', '50%'], //宽高
+                    content: result
+                });
+
+            })
+
+        });
+
+    });
+    //排序异步请求回调
+    function ajaxRequestCallback(result,id,_this)
+    {
+
+        switch(id){
+
+            case 'delete':
+
+                _delete(result, _this);
+
+                break;
+
+            case 'status':
+
+                _status(result, _this)
+
+                break;
+
+        }
+
+
+    }
+    //删除回调
+    function _delete(res, _this){
+
+        if(res.code == 200){
+
+            layer.msg(res.msg,{time:2000});
+
+            //删除当前节点
+            _this
+                    .parent()
+                    .parent()
+                    .fadeOut(2000,function(){
+
+                        $(this).remove();
+
+                    })
+
+
+        }else{
+
+            layer.msg(res.msg,function(){});
+
+        }
+
+    }
+    //修改状态回调
+    function _status(res, _this){
+
+        if(res.code == 200){
+
+            if(res.data.status == 1){
+
+                res.data.status = 0;
+
+                _this.data('msg','确定要禁用吗?');
+
+                layer.msg('解禁成功',{time:1000},function(){
+
+                    _this
+                            .removeClass('btn-success')
+                            .addClass('btn-warning')
+                            .text('禁用')
+                            .data('data',res.data);
+
+                });
+
+            }else{
+
+                res.data.status = 1;
+
+                _this.data('msg','');
+
+                layer.msg('禁用成功',{time:1000},function(){
+
+                    _this
+                            .removeClass('btn-warning')
+                            .addClass('btn-success')
+                            .text('解禁')
+                            .data('data',res.data);
+
+                });
+
+            }
+
+        }else{
+
+            layer.msg(res.msg,function(){});
+
+        }
+
+    }
+</script>

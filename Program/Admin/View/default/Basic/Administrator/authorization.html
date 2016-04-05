@@ -1,0 +1,84 @@
+<div class="col-xs-12 col-md-12 col-lg-12 padding-none lists" id="authorization">
+    <div class="col-lg-2 col-md-3 col-xs-5 filed-name text-right">管理组<pub>*</pub> :</div>
+    <div class="col-lg-10 col-md-9 col-xs-7 filed-from padding-none">
+        <?php foreach($groups as $v):
+
+                $checked = '';
+                if(in_array($v['id'],$thisGroup)) $checked = 'checked="checked"';
+
+            ?>
+            <span class="block">
+                <label>
+                    <input type="checkbox" <?php echo $checked;?> value="<?php echo $v['id']?>">
+                    &nbsp;&nbsp;
+                    <?php echo $v['title']?>
+                </label>
+            </span>
+        <?php endforeach;?>
+    </div>
+</div>
+
+<div class="col-xs-12 col-md-12 col-lg-12 lists text-right" style="padding-right: 20px">
+    <input type="hidden" id="groups" value="<?php echo implode(',',$thisGroup);?>">
+    <button type="button" class="btn btn-success radius-none" id="authsave">保存</button>
+    <button type="button" class="btn btn-default radius-none" id="cancel">取消</button>
+</div>
+
+<script>
+    $(function(){
+        $('input[type="checkbox"]','#authorization').unbind('click');
+        $('input[type="checkbox"]','#authorization').click(function(){
+
+            var ids = '';
+
+            $('input[type="checkbox"]:checked','#authorization').each(function(i,v){
+
+                ids += $(this).val()+',';
+
+            });
+
+            ids = ids.substring(0,(ids.length -1));
+
+            $('#groups').val(ids);
+
+        });
+        $('#cancel').unbind('click');
+        $('#cancel').click(function(){
+
+            layer.closeAll();
+
+        });
+
+        //提交数据
+        $('#authsave').unbind('click');
+        $('#authsave').click(function(){
+
+            var data = {}
+
+            data.userid = <?php echo $userid;?>
+
+            data.group = $('#groups').val();
+
+            layer.load();
+
+            $.post('<?php echo U("Admin/Basic/Administrator/authorization")?>',{'data':data},function(result){
+
+                layer.closeAll();
+
+                if(result.code == 200){
+
+
+                    layer.msg('授权成功');
+
+                }else{
+
+                    layer.msg('授权失败',function(){});
+
+                }
+
+            });
+
+
+        });
+    })
+</script>
